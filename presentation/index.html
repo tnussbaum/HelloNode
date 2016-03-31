@@ -1,0 +1,477 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue dark nobackground">
+    <aside class="gdbar"><img src="images/HMBlogo.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <!-- <slide>
+    <hgroup>
+      <h2>About</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Orrville -> Plain City
+        </li>
+        <li>HMB, Mettler Toledo, A&amp;F, Software Architects
+        </li>
+        <li>Megan, Doug (11), Greg (8), Lainey(5)
+        </li>
+        <li>TV / Video technology, youth sports - especially baseball
+        </li>
+      </ul>
+    </article>
+  </slide> -->
+
+  <slide>
+    <hgroup>
+      <h2>About</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Director of Java practice</li>
+        <li>HMB, Mettler Toledo, A&amp;F, ...</li>
+        <li>Java, .NET, Python, Node.js</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        So ... Node.js
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Node.js</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Created in 2009 by Ryan Dahl (Joyent)
+        </li>
+        <li>V8 Javascript engine, an event loop (libuv underneath), and an I/O API
+        </li>
+        <li>First on Linux, then other Unix, then ported to Windows
+        </li>
+        <li>Since its introduction, it has contributed to the popularity of Javascript
+          <ul>
+            <li>Ranks 8th, 2.3% on TIOBE March 2016 index</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Why so popular?</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Ease of use / approachability
+        </li>
+        <li>Emphasis on I/O performance
+        </li>
+        <li>Focus in modular development
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Popularity - Ease of use</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>One language, client / server</li>
+        <li>Large developer base</li>
+        <li>Simple servers, easy to get started</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Popularity - Performance</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Asynchronous, yet single threaded
+          <ul>
+            <li>"Everything runs in parallel, except your code"</li>
+            <li>Ruby EventMachine, Python Twisted</li>
+          </ul>
+        </li>
+        <li>Works extremely well when applications are I/O-bound</li>
+        <li>Event-based programming (natural for Javascript)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Popularity - Modularity</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Solve problems in small pieces</li>
+        <li>Similar to Unix command line approach</li>
+        <li>Leads to "throw-away-ability"</li>
+       </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What makes Node.js great?</h2>
+    </hgroup>
+    <article>
+      <ul class='build'>
+        <li>NPM / ecosystem
+          <ul>
+            <li>Package/library management</li>
+            <li>Lots of problems already solved</li>
+          </ul>
+        </li>
+
+        <li>Node.js / Javascript tools
+          <ul>
+            <li>Grunt, Gulp, etc.</li>
+            <li>IDE and text editor support
+              <ul>
+                <li>Atom</li>
+                <li>Visual Studio Code</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        But that only gets us so far ...
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What's so great about Java?</h2>
+    </hgroup>
+    <article>
+      <ul class='build'>
+        <li>Enterprise level support
+          <ul>
+            <li>Oracle, IBM, Pivotal/SpringSource, etc</li>
+            <li>Node.js is getting better</li>
+          </ul>
+        </li>
+        <li>Enterprise level tools
+          <ul class='build'>
+            <li>Profilers</li>
+            <li>Monitoring</li>
+          </ul>
+        </li>
+        <li>Enterprise level integration
+          <ul>
+            <li>Libraries for just about anything</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big' style='font-size: 3em'>
+        Can <img src='images/duke.jpg' style='vertical-align:middle'> &hearts; <img src='images/node.js.png' style='vertical-align:middle'>?
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Combining Node.js / Java</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Avatar.js</li>
+        <li>Nodyn</li>
+        <li>Trireme</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Avatar.js</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>java.net open source project from Oracle</li>
+        <li>Brings Node.js "inside" the JVM</li>
+        <li>Built on (requires) Java8
+          <ul>
+            <li>Utilizes <code>invokedynamic</code> and Nashorn Javascript engine</li>
+          </ul>
+        </li>
+        <li>JNI wrappers around libuv</li>
+        <li>Bundles patched version of Node.js APIs</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        Demos!
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Avatar.js Issues / Future</h2>
+    </hgroup>
+    <article>
+      <p>Issues</p>
+      <ul>
+        <li>Performance</li>
+        <li>Compatibility - worst of the 3 solutions</li>
+        <li>Dependencies</li>
+      </ul>
+      <p>Project Avatar</p>
+      <ul>
+        <li>BaaS solution based on Avatar.js and Glassfish</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nodyn</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Open source project from JBoss/Redhat (TorqueBox)</li>
+        <li>Implementation of Node.js in Java (7+) / DynJS</li>
+        <li>Leverages Netty and vert.x</li>
+        <li>Node.js API
+          <ul>
+            <li>Ported to Java</li>
+            <li>or wrapped via JNI</li>
+          </ul>
+        </li>
+        <li>Can be run stand-alone, or embedded in larger Java app</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        More demos!
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nodyn Issues / Future</h2>
+    </hgroup>
+    <article>
+      <p>Issues</p>
+      <ul>
+        <li>Performance (mainly in DynJS)</li>
+        <li>Compatibility - mostly compatible with Node.js 0.10.x</li>
+        <li>Dependencies</li>
+      </ul>
+      <p>Future</p>
+      <ul>
+        <li>Uncertain, but also not tied to Oracle</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Trireme</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Github project from Apigee (API monitoring app)</li>
+        <li>Similar to Nodyn - Node.js re-implemented in the JVM</li>
+        <li>Rewrites some behaviors of Node.js to leverage Java threading</li>
+        <li>Uses Rhino engine, with Java implementations of some Node.js modules</li>
+        <li>Designed for embedding in a larger Java application</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        More demos!
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Trireme Issues / Future</h2>
+    </hgroup>
+    <article>
+      <p>Issues</p>
+      <ul>
+        <li>Performance (Rhino, JVM startup time)</li>
+        <li>Compatibility - best compatibility with Node.js 0.10.x</li>
+        <li>Dependencies</li>
+      </ul>
+      <p>Future</p>
+      <ul>
+        <li>Promising - new version with upgrade to Nashorn, newer Node.js support</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class='flexbox vcenter big'>
+        But why?
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Why Node.js+Java?</h2>
+    </hgroup>
+    <article>
+      <ul class='build'>
+        <li>Java has solved a lot of business problems</li>
+        <li>Businesses have invested in infrastructure</li>
+        <li>The JVM is <i>fast</i>
+          <ul>
+            <li>JIT</li>
+            <li>Threading</li>
+            <li>Scalability</li>
+          </ul>
+        </li>
+        <li>Node.js / Javascript efficiencies with newer app designs</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What's next?</h2>
+    </hgroup>
+    <article>
+      <ul class='build'>
+        <li>3 different approaches to the same problem</li>
+        <li>None of them are "enterprise-ready" solutions, but can fill niche needs</li>
+        <li>Many opportunities to learn, not just with Javascript</li>
+        <li>Trireme is in the best position to progress, specifically in servlet implementation</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Sources</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Avatar.js - https://avatar-js.java.net/</li>
+        <li>Project Avatar - https://avatar.java.net/</li>
+        <li>Nodyn - https://nodyn.io/</li>
+        <li>DynJS - http://dynjs.org/</li>
+        <li>Trireme - https://github.com/apigee/trireme/</li>
+      </ul>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Sources</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>https://strongloop.com/strongblog/how-to-run-node-js-on-the-jvm-with-avatar-js-and-loopback/</li>
+        <li>http://nodyn.io/posts/welcome-to-nodyn.html</li>
+        <li>https://groups.google.com/forum/#!topic/nodejs/a2o-AHe6JO4</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/HMBlogo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Thank You!</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

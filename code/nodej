@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+java -Djava.library.path=dist -cp lib/slf4j-api-1.7.2.jar:lib/slf4j-simple-1.7.2.jar:lib/yahoo-weather-java-api-1.2.0.jar:dist/avatar-js.jar com.oracle.avatar.js.Server $1
